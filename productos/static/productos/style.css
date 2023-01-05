@@ -1,0 +1,128 @@
+.productos {
+    display: inline-flex;
+    position: relative;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.box {
+    width: 250px;
+    height: 350px;
+    border-radius: 3%;
+    box-shadow: 10px 9px 4px -4px lightgrey;
+    background-color: whitesmoke;
+    padding-bottom: 10px;
+    font-family: Calibri;
+    margin: 10px 10px 10px 10px;
+    position: relative;
+}
+
+.detalles {
+    width: 20px;
+    height: 20px;
+    position:absolute;
+    top: 0;
+    right: 0;
+    margin: 15px;
+    background : url("/static/productos/images/info.png") no-repeat;
+    background-size: 20px;  
+    background-color: rgba(204, 204, 204, 0.67);
+    border-radius: 36%;
+    border-width: 1px;
+    border-color: rgba(85, 84, 84, 0.76);
+}
+
+.contenedor-imagen {
+    height: 250px;
+    width: auto;
+    background-color: white;
+    border-radius: 3% 3% 0 0;
+    border-width: 10px;
+}
+
+.image-size {
+    height: 250px;
+    margin: 0 31px;
+    width: -moz-available;
+}
+
+.titulo {
+    padding: 0 15px;
+}
+
+.descripcion {
+    padding: 15px;
+}
+
+.precio {
+    text-align: right;
+    padding: 0 15px 0;
+    color: black;
+    position: absolute;
+    bottom: -3%;
+    right: 0;
+}
+.precio-of {
+    text-align: right;
+    padding: 0 15px 0;
+    color: rgb(143, 140, 140);
+    position: absolute;
+    bottom: -3%;
+    right: 53%;
+}
+
+.oferta {
+    text-align: right;
+    padding: 0 15px 0;
+    color: black;
+    position: absolute;
+    bottom: -3%;
+    right: 0;
+}
+
+[data-tooltip]{ 
+    cursor:pointer;
+}
+
+[data-tooltip]::before {
+    content : attr(data-tooltip);
+    background-color:rgba(0,0,0,.75);
+    color:white;
+    -webkit-font-smoothing: antialiased;
+    width:100px;
+    padding:10px;
+    height:auto;
+    border-radius:3px;
+    display:none;
+    position:absolute;
+    bottom:-10px;
+    left: 30px;
+    pointer-events: none;
+    z-index:99;
+}
+
+[data-tooltip]::after{
+    content:"";
+    height:1px;
+    width:1px;
+    border:10px solid transparent;
+    border-right-color:rgba(0,0,0,.75);
+    position:absolute;
+    bottom:-5%;
+    right:-50%;
+    display: none;
+}
+
+[data-tooltip]:hover::before,
+[data-tooltip]:hover::after
+{ display:block;} 
+
+
+/* Bootstrap */
+
+.p-3{
+    background-color: #372a27;
+}
